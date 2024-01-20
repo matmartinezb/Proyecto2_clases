@@ -4,6 +4,6 @@ from .models import Alumno
 
 def index(request):
     alumnos= Alumno.objects.all()
-    context={}
+    context={"alumnos":alumnos}
     return render(request,'alumnos/index.html',context)
 
